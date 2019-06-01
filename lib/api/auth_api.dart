@@ -5,7 +5,12 @@ class AuthApi {
   static FirebaseUser user;
 
   Future<FirebaseUser> loginWithGoogle() async {
-    final googleAccount = await GoogleSignIn().signIn();
+    final googleAccount = await GoogleSignIn(
+      scopes: [
+        'email',
+        'https://www.googleapis.com/auth/contacts.readonly',
+      ],
+    ).signIn();
     //If not logged in throw error
     if (googleAccount == null) {
       throw Exception('Login failed/cancelled by user.');

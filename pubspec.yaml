@@ -42,6 +42,8 @@ dependencies:
   #For Firebase  authentication
   firebase_auth: ^0.11.1+5
 
+  flare_flutter: any
+
   #For extracting file name
   path: ^1.6.2
 
@@ -91,4 +93,5 @@ flutter:
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
   assets:
+    - assets/flare/DashBird.flr
     - assets/images/

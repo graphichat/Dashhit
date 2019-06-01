@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:dashhit/UI/MainPage_View.dart';
+import 'package:dashhit/UI/login_view.dart';
 
 void main() => runApp(MainApp());
 
@@ -12,7 +12,7 @@ class MainApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: primaryBlack,
       ),
-      home: MainPage(),
+      home: LoginView(),
 
     );
   }

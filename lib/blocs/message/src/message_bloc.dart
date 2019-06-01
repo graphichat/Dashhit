@@ -21,4 +21,10 @@ class MessageBloc extends Bloc<MessageEvent, MessageState> {
       }
     }
   }
+
+  @override
+  void onTransition(Transition<MessageEvent, MessageState> transition) {
+    print(transition.nextState.runtimeType.toString());
+    super.onTransition(transition);
+  }
 }
