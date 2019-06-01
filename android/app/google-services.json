@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "261074532364",
+    "firebase_url": "https://dashhit-92333.firebaseio.com",
+    "project_id": "dashhit-92333",
+    "storage_bucket": "dashhit-92333.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:261074532364:android:2498a14cff8c4200",
+        "android_client_info": {
+          "package_name": "com.example.dashhit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "261074532364-09lhlufdif3e54no8o868o7e603sh00n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6cxAsPpKPiz8hqLmeNSZ4lRWIhpSD6KQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "261074532364-09lhlufdif3e54no8o868o7e603sh00n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
