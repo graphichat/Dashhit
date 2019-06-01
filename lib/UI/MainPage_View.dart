@@ -20,19 +20,22 @@ class _Mainpage extends State<MainPage>{
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            
+
             Container(
-              child: Text("Dash Hit",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),),
-            ),
-            Container(
-              child: Image.asset("assets/images/dash.png"),
+              margin: EdgeInsets.only(top: 50),
+              child: Image.asset("assets/images/Group.png",width: 200,),
 
             ),
-            GestureDetector(
-              onTap: (){logIn();},
-              child: Container(
-                margin: EdgeInsets.only(top: 50),
-                child: Text("Sign In",style: TextStyle(fontSize: 20),),
+            Container(
+              margin: EdgeInsets.only(top: 150),
+              width: 200,
+              child: Card(
+                color: Colors.white,
+                child: FlatButton.icon(
+                    onPressed: (){logIn();},
+                    icon: Image(image: new AssetImage("assets/images/g-logo.gif"),width: 40),
+                    label: Text("Sign In",style: TextStyle(fontSize: 18),)
+                ),
               ),
             )
           ],
