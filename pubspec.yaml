@@ -25,13 +25,13 @@ dependencies:
   cupertino_icons: ^0.1.2
 
   #For firebase back end
-  cloud_firestore: ^0.12.1
+  cloud_firestore: 
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  firebase_core: ^0.2.5
+  firebase_core: 
 
 
 # For information on the generic Dart part of this file, see the

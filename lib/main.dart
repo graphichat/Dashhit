@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:dashhit/UI/MainPage_View.dart';
 
-void main() => runApp(MainApp());
+void main() => runApp(MyApp());
 
-class MainApp extends StatelessWidget {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: MainPage(),
     );
   }
