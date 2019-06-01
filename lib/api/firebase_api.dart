@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:dashhit/models/message.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:path/path.dart';
@@ -34,5 +35,11 @@ class FirebaseApi {
         'storagePath': taskSnapshot.storageMetadata.path
       }
     });
+  }
+
+  Stream<List<Message>> stream() {
+    return Firestore.instance.collection('Messages').snapshots().map(
+        (qrySnap) => qrySnap.documents
+            .map((docSnap) => Message.fromDocumentSnapshot(docSnap)));
   }
 }

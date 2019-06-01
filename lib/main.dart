@@ -1,7 +1,8 @@
+import 'package:dashhit/UI/login_view.dart';
 import 'package:flutter/material.dart';
 import 'package:dashhit/UI/MainPage_View.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(LoginView());
 
 class MyApp extends StatelessWidget {
   @override
