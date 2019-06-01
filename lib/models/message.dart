@@ -24,10 +24,12 @@ class Message {
 }
 
 class MessagedBy {
+  String photoUrl;
   String name;
   String email;
 
   MessagedBy.fromMapData(Map data) {
+    photoUrl = data['photoUrl'];
     name = data['name'];
     email = data['email'];
   }
