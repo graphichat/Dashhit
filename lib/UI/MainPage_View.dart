@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:dashhit/blocs/blocs.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 class MainPage extends StatefulWidget {
   @override
@@ -6,11 +8,13 @@ class MainPage extends StatefulWidget {
 }
 
 class _Mainpage extends State<MainPage>{
+  AuthBLoc authBloc;
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    print("blb07 hi");
+    //authBloc = AuthBLoc();
+    initLogin();
   }
   @override
   Widget build(BuildContext context) {
@@ -32,7 +36,10 @@ class _Mainpage extends State<MainPage>{
               child: Card(
                 color: Colors.white,
                 child: FlatButton.icon(
-                    onPressed: (){logIn();},
+                    onPressed: (){
+                    logIn();
+                      //authBloc.dispatch(LoginWithGoogleE());
+                    },
                     icon: Image(image: new AssetImage("assets/images/g-logo.gif"),width: 40),
                     label: Text("Sign In",style: TextStyle(fontSize: 18),)
                 ),
@@ -47,6 +54,34 @@ class _Mainpage extends State<MainPage>{
   }
 
   void logIn() {
+    doLogin();
+  }
+  GoogleSignIn _googleSignIn = new GoogleSignIn(
+    scopes: [
+      'email',
+      'https://www.googleapis.com/auth/contacts.readonly',
+    ],
+  );
 
+  initLogin() {
+    print("blb07 processing");
+    _googleSignIn.onCurrentUserChanged.listen((GoogleSignInAccount account) async {
+      if (account != null) {
+        // user logged
+        print("blb07 logged  in");
+        print("blb07 "+account.displayName);
+      } else {
+        // user NOT logged
+        print("blb07 not logged");
+      }
+    });
+    _googleSignIn.signInSilently().whenComplete(() => {
+          //dismissLoading();
+    });
+  }
+  doLogin() async {
+    //showLoading();
+    print("blb07 siging");
+    await _googleSignIn.signIn();
   }
 }

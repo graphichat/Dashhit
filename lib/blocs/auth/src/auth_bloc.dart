@@ -14,8 +14,16 @@ class AuthBLoc extends Bloc<AuthEvent, AuthState> {
         final user = await AuthApi().loginWithGoogle();
         yield user != null ? LoggedInS(user) : LoginErrorS();
       } catch (err) {
+        print("blb07 "+err);
         yield LoginErrorS();
       }
     }
+  }
+
+  @override
+  void onTransition(Transition<AuthEvent, AuthState> transition) {
+    super.onTransition(transition);
+    print("blb07 "+transition.nextState.runtimeType.toString());
+    print("blb07 "+transition.currentState.toString());
   }
 }
