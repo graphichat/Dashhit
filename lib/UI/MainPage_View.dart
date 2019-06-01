@@ -26,6 +26,7 @@ class _Mainpage extends State<MainPage>{
             ),
             Container(
               child: Image.asset("assets/images/dash.png"),
+
             ),
             GestureDetector(
               onTap: (){logIn();},
